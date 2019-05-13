@@ -8,39 +8,57 @@
 	<meta name="description" content="Join us in Chicago for an intimate wedding with our closest friends and family.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Connor Mason">
-<!-->
-	<link rel="apple-touch-icon" href="./images/[TBD]">
+<!--<link rel="apple-touch-icon" href="./images/[TBD]">
 	<link rel="icon" href="./images/[TBD]">
-	<link rel="shortcut icon" href="./images/[TBD]" />
-	<meta property="og:title" content=".." />
-	<meta property="og:url" content="https://abbyandconnor.wedding/" />
-	<meta property="og:image" content="./images/[TBD]" />
-	<meta property="og:site_name" content="abbyandconnor.wedding" />
-	<meta property="og:description" content=".." />
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content=".." />
-	<meta name="twitter:domain" content="abbyandconnor.wedding" />
-	<meta name="twitter:title" content=".." />
-	<meta name="twitter:description" content=".." />
-	<meta name="twitter:image" content="./images/[TBD]" /> -->
+	<link rel="shortcut icon" href="./images/[TBD]" /> -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	
 </head>
 
 <body>
-	<div id="wrap">
 	
 		<!-- Left or top pane, depending on device. -->
-		<div id="left-half"></div>
+		<section id="left-half">
+			<div class="photo" id="lincoln-park" style="background-image:url(images/lincoln-park.jpeg)" alt="Lincoln Park, Chicago"></div>
+			<div class="photo" id="hawaii" style="background-image:url(images/hawaii.jpeg)" alt="Waipi'o Valley, Hawaii"></div>
+			<div class="photo" id="beer-garden" style="background-image:url(images/beer-garden.jpeg)" alt="Beer Garden, Munich"></div>
+			<div class="photo" id="mca" style="background-image:url(images/mca-wedding.jpg)" alt="Museum of Contemporary Art, Chicago"></div>
+			<div class="photo" id="munich" style="background-image:url(images/munich.jpeg)" alt="Munich, Germany"></div>
+			<div class="photo" id="notre-dame" style="background-image:url(images/notre-dame.jpeg)" alt="Notre Dame, South Bend, Indiana"></div>
+			<div class="photo" id="parsons" style="background-image:url(images/parsons.jpeg)" alt="Parson's Chicken & Fish, Chicago"></div>
+			<div class="photo" id="salsburg" style="background-image:url(images/salsburg.jpeg)" alt="Salsburg, Austria"></div>
+			<div class="photo" id="takeshita" style="background-image:url(images/takeshita.jpeg)" alt="Takeshita Street, Tokyo"></div>
+			<div class="photo" id="tokyo" style="background-image:url(images/tokyo-tower.jpeg)" alt="Tokyo, Japan"></div>
+		</section>
+		
+		<script>
+			$("#left-half > div:gt(0)").hide();
+
+			setInterval(function() { 
+ 				$('#left-half > div:first')
+					.fadeOut(2500)
+				    .next()
+				    .fadeIn(2500)
+				    .end()
+				    .appendTo('#left-half')
+				}, 5000);
+		</script>
 	
 		<!-- Right or bottom pane, depending on device. -->
-		<div id="right-half">
+		<section id="right-half">
 			<div id="text-container">
 				<h1>Abby &amp; Connor<br>are getting married.</h1>
 				<h2>September 14, 2019</h2>
-				<p>Join us in Chicago for an intimate wedding with our closest friends and family. Lorem ipsum dolor ipset. Lorem ipsum dolor ipset. Lorem ipsum dolor ipset. Lorem ipsum dolor ipset. Lorem ipsum dolor ipset.</p>
-				<p></p>
+				<p>Join us in Chicago for an intimate wedding with our closest friends and family. We're excited for a laid back day celebrating the people most important to us in our lives, and this website can help all of you plan for the day and know what to expect.</p>
+				<ul class="table-view">
+					<li class="table-view"><a href="details.html">Details about the day &rsaquo;</a></li>
+					<li class="table-view"><a href="honeymoon.html">Help fund our honeymoon &rsaquo;</a></li>
+					<li class="table-view"><a href="rsvp.html">RSVP to the event &rsaquo;</a></li>
+				</ul>
 			</div>
-		</div>
+		</section>
 		
-	</div>
+<!-- <svg src="images/chevron-right.svg"></svg> -->
 
 </body>

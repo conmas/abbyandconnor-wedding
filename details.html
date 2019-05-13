@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>Abby &amp; Connor are getting married.</title>
+	<link rel="stylesheet" type="text/css" id="theme" href="./stylesheets/styles.css">
+	<meta charset="utf-8"/>
+	<meta name="description" content="Join us in Chicago for an intimate wedding with our closest friends and family.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Connor Mason">
+<!--<link rel="apple-touch-icon" href="./images/[TBD]">
+	<link rel="icon" href="./images/[TBD]">
+	<link rel="shortcut icon" href="./images/[TBD]" /> -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
+	
+</head>
+
+<body>
+	
+		<!-- Left or top pane, depending on device. -->
+		<section id="left-half">
+			<div class="map" id="map"></div>
+		</section>
+		
+		<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoiY29ubWFzIiwiYSI6ImNqdm1uZ2Z0ZjB5M3I0OG80cnJhMHgyY3UifQ.f9zQ7YncBYx1TbScHWP1JA';
+			var map = new mapboxgl.Map({
+				container: 'map',
+				style: 'mapbox://styles/mapbox/streets-v9'
+			});
+		</script>
+
+		<!-- Right or bottom pane, depending on device. -->
+		<section id="right-half">
+			<div id="text-container">
+				<a href="index.html" class="breadcrumbs">&lsaquo; Back</a>
+				<h1>Details about the big day.</h1>
+				<h2>September 14, 2019</h2>
+				<p></p>
+			</div>
+		</section>
+
+</body>
