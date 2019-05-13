@@ -27,20 +27,19 @@ body {
 	@include breakpoint(iphone) {
 		width: 100%;
 		height: 50%;
-	}
+	}	
+}
+
+div.photo {
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 	
-	div.photo {
-		height: 100%;
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-	
-	div.map {
-		height: 100%;
-		width: 100%;
-	}
-	
+div.map {
+	height: 100%;
+	width: 100%;
 }
 
 .right-half {

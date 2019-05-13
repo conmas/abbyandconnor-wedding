@@ -32,13 +32,15 @@ body {
     height: 50%;
   }
 }
-.left-half div.photo {
+
+div.photo {
   height: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.left-half div.map {
+
+div.map {
   height: 100%;
   width: 100%;
 }
