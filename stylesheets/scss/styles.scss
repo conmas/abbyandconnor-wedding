@@ -75,113 +75,114 @@ body {
 		@include breakpoint(iphone) {
 			padding: 0em 1.5em 1.5em 1.5em;
 		}
-		h1 {
-			font-weight: 700;
-			font-size: 3em;
-			line-height: 1.2em;
-			@include breakpoint(ipad) {
-				font-size: 2.75em;
-			}
-			@include breakpoint(iphone) {
-				font-size: 2em;
-			}
-		}
-
-		h2 {
-			color: $lightgray;
-			font-weight: 500;
-			font-size: 1.75em;
-			line-height: 1.2em;
-			@include breakpoint(ipadpro) {
-				font-size: 1.5em;
-			}
-			@include breakpoint(ipad) {
-				font-size: 1em;
-			}
-		}
-
-		a {
-			text-decoration: none;
-			color: $accentcolor;
-			cursor: pointer;
-			transition: all 0.6s ease;
-			&:hover, &:focus {
-				color: $accentcolormedium;
-			}
-			&:active {
-				color: $accentcolordark;
-			}
-		}
-
-		p, li {
-			font-weight: 400;
-			font-size: 1.25em;
-			line-height: 1.5em;
-			max-width: 750px;
-			padding-bottom: 1em;
-		}
-		
-		ul {
-			list-style: none;
- 			padding-left: 0;
-		}
-		
-		.button-area {
-			display: flex;
-			width: 100%;
-			justify-content: center;
-			align-items: stretch;
-			align-content: center;
-			padding: 1em 0em 5em 0em;
-			@include breakpoint(imac) {
-				flex-direction: row wrap;
-			}
-			@include breakpoint(macbook) {
-				flex-direction: column;
-			}
-		}
-		
-		button {
-			font-size: 1em;
-			height: 50px;
-			width: 150px;
-			color: black;
-			background-color: $accentcolor;
-			border: none;
-			border-radius: .5em;
-			cursor: pointer;
-			transition: all 0.6s ease;
-			margin: 0em 1em 0em 0em;
-			padding: 0em 1em 0em 1em;
-			@include breakpoint(macbook) {
-				margin: 0em 0em 1em 0em;
-				padding: 0em 1em 0em 1em;
-				width: 100%;
-			}
-			&:hover, &:focus {
-				background-color: $accentcolormedium;
-				color: white;
-			}
-			&:active {
-				background-color: $accentcolordark;
-				color: white;
-			}
-		}
-
-		.breadcrumbs {
-			font-weight: 500;
-			text-decoration: none;
-			color: $accentcolor;
-		}
-		
-		.footer {
-			font-size: 0.5em;
-			color: $lightgray;
-			position: relative;
-    		bottom: 0;
-    		width: 100%;
-    		height: 20px;
-    		margin: 0 auto;
-		}
 	}
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 3em;
+	line-height: 1.2em;
+	@include breakpoint(ipad) {
+		font-size: 2.75em;
+	}
+	@include breakpoint(iphone) {
+		font-size: 2em;
+	}
+}
+
+h2 {
+	color: $lightgray;
+	font-weight: 500;
+	font-size: 1.75em;
+	line-height: 1.2em;
+	@include breakpoint(ipadpro) {
+		font-size: 1.5em;
+	}
+	@include breakpoint(ipad) {
+		font-size: 1em;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $accentcolor;
+	cursor: pointer;
+	transition: all 0.6s ease;
+	&:hover, &:focus {
+		color: $accentcolormedium;
+	}
+	&:active {
+		color: $accentcolordark;
+	}
+}
+
+p, li {
+	font-weight: 400;
+	font-size: 1.25em;
+	line-height: 1.5em;
+	max-width: 750px;
+	padding-bottom: 1em;
+}
+		
+ul {
+	list-style: none;
+ 	padding-left: 0;
+}
+		
+.button-area {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: stretch;
+	align-content: center;
+	padding: 1em 0em 5em 0em;
+	@include breakpoint(imac) {
+		flex-direction: row wrap;
+	}
+	@include breakpoint(macbook) {
+		flex-direction: column;
+	}
+}
+		
+button {
+	font-size: 1em;
+	height: 50px;
+	width: 150px;
+	color: black;
+	background-color: $accentcolor;
+	border: none;
+	border-radius: .5em;
+	cursor: pointer;
+	transition: all 0.6s ease;
+	margin: 0em 1em 0em 0em;
+	padding: 0em 1em 0em 1em;
+	@include breakpoint(macbook) {
+		margin: 0em 0em 1em 0em;
+		padding: 0em 1em 0em 1em;
+		width: 100%;
+	}
+	&:hover, &:focus {
+		background-color: $accentcolormedium;
+		color: white;
+	}
+	&:active {
+		background-color: $accentcolordark;
+		color: white;
+	}
+}
+
+.breadcrumbs {
+	font-weight: 500;
+	text-decoration: none;
+	color: $accentcolor;
+}
+
+.footer {
+	font-size: 0.5em;
+	color: $lightgray;
+	position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    margin: 0 auto;
 }

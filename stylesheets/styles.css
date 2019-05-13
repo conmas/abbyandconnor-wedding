@@ -89,61 +89,67 @@ body {
     padding: 0em 1.5em 1.5em 1.5em;
   }
 }
-.right-half .text-container h1 {
+
+h1 {
   font-weight: 700;
   font-size: 3em;
   line-height: 1.2em;
 }
 @media (max-width: 800px) {
-  .right-half .text-container h1 {
+  h1 {
     font-size: 2.75em;
   }
 }
 @media (max-width: 600px) {
-  .right-half .text-container h1 {
+  h1 {
     font-size: 2em;
   }
 }
-.right-half .text-container h2 {
+
+h2 {
   color: #63636E;
   font-weight: 500;
   font-size: 1.75em;
   line-height: 1.2em;
 }
 @media (max-width: 999px) {
-  .right-half .text-container h2 {
+  h2 {
     font-size: 1.5em;
   }
 }
 @media (max-width: 800px) {
-  .right-half .text-container h2 {
+  h2 {
     font-size: 1em;
   }
 }
-.right-half .text-container a {
+
+a {
   text-decoration: none;
   color: #00c490;
   cursor: pointer;
   transition: all 0.6s ease;
 }
-.right-half .text-container a:hover, .right-half .text-container a:focus {
+a:hover, a:focus {
   color: #00694d;
 }
-.right-half .text-container a:active {
+a:active {
   color: #003d2d;
 }
-.right-half .text-container p, .right-half .text-container li {
+
+p, li {
   font-weight: 400;
   font-size: 1.25em;
   line-height: 1.5em;
   max-width: 750px;
   padding-bottom: 1em;
 }
-.right-half .text-container ul {
+
+ul {
   list-style: none;
   padding-left: 0;
 }
-.right-half .text-container .button-area {
+
+.button-area {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -152,16 +158,17 @@ body {
   padding: 1em 0em 5em 0em;
 }
 @media (min-width: 1200px) {
-  .right-half .text-container .button-area {
+  .button-area {
     flex-direction: row wrap;
   }
 }
 @media (max-width: 1199px) {
-  .right-half .text-container .button-area {
+  .button-area {
     flex-direction: column;
   }
 }
-.right-half .text-container button {
+
+button {
   font-size: 1em;
   height: 50px;
   width: 150px;
@@ -175,26 +182,28 @@ body {
   padding: 0em 1em 0em 1em;
 }
 @media (max-width: 1199px) {
-  .right-half .text-container button {
+  button {
     margin: 0em 0em 1em 0em;
     padding: 0em 1em 0em 1em;
     width: 100%;
   }
 }
-.right-half .text-container button:hover, .right-half .text-container button:focus {
+button:hover, button:focus {
   background-color: #00694d;
   color: white;
 }
-.right-half .text-container button:active {
+button:active {
   background-color: #003d2d;
   color: white;
 }
-.right-half .text-container .breadcrumbs {
+
+.breadcrumbs {
   font-weight: 500;
   text-decoration: none;
   color: #00c490;
 }
-.right-half .text-container .footer {
+
+.footer {
   font-size: 0.5em;
   color: #63636E;
   position: relative;
