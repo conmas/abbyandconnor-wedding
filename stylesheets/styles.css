@@ -3,8 +3,6 @@ body {
   width: 100%;
   height: 100%;
   background: #F6F6F6;
-  transition-timing-function: ease-in-out;
-  transition-duration: 5s;
 }
 
 .left-half {
@@ -125,21 +123,85 @@ body {
 .right-half .text-container a {
   text-decoration: none;
   color: #00c490;
+  cursor: pointer;
+  transition: all 0.6s ease;
 }
-.right-half .text-container p, .right-half .text-container li * {
+.right-half .text-container a:hover, .right-half .text-container a:focus {
+  color: #00694d;
+}
+.right-half .text-container a:active {
+  color: #003d2d;
+}
+.right-half .text-container p, .right-half .text-container li {
   font-weight: 400;
   font-size: 1.25em;
   line-height: 1.5em;
   max-width: 750px;
-}
-.right-half .text-container .table-view li {
-  list-style: none;
-  padding-left: none;
   padding-bottom: 1em;
 }
+.right-half .text-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+.right-half .text-container .button-area {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  padding: 1em 0em 5em 0em;
+}
+@media (min-width: 1200px) {
+  .right-half .text-container .button-area {
+    flex-direction: row wrap;
+  }
+}
+@media (max-width: 1199px) {
+  .right-half .text-container .button-area {
+    flex-direction: column;
+  }
+}
+.right-half .text-container button {
+  font-size: 1em;
+  height: 50px;
+  width: 150px;
+  color: black;
+  background-color: #00c490;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  margin: 0em 1em 0em 0em;
+  padding: 0em 1em 0em 1em;
+}
+@media (max-width: 1199px) {
+  .right-half .text-container button {
+    margin: 0em 0em 1em 0em;
+    padding: 0em 1em 0em 1em;
+    width: 100%;
+  }
+}
+.right-half .text-container button:hover, .right-half .text-container button:focus {
+  background-color: #00694d;
+  color: white;
+}
+.right-half .text-container button:active {
+  background-color: #003d2d;
+  color: white;
+}
 .right-half .text-container .breadcrumbs {
+  font-weight: 500;
   text-decoration: none;
   color: #00c490;
+}
+.right-half .text-container .footer {
+  font-size: 0.5em;
+  color: #63636E;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
