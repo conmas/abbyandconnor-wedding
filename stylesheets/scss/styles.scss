@@ -103,6 +103,18 @@ h2 {
 	}
 }
 
+h3 {
+	color: $lightgray;
+	font-weight: 300;
+	font-size: 1.75em;
+	@include breakpoint(ipadpro) {
+		font-size: 1.5em;
+	}
+	@include breakpoint(ipad) {
+		font-size: 1em;
+	}
+}
+
 a {
 	text-decoration: none;
 	color: $accentcolor;
@@ -144,7 +156,7 @@ ul {
 	}
 }
 		
-button {
+button.money-plz {
 	font-size: 1em;
 	height: 50px;
 	width: 150px;
@@ -167,6 +179,32 @@ button {
 	}
 	&:active {
 		background-color: $accentcolordark;
+		color: white;
+	}
+}
+
+button.add-to-calendar {
+	font-size: .75em;
+	height: 25px;
+	width: 150px;
+	color: white;
+	background-color: $calcolor;
+	border: none;
+	border-radius: .5em;
+	cursor: pointer;
+	transition: all 0.6s ease;
+	margin: 0em 0em 0.5em 0em;
+	padding: 0;
+	@include breakpoint(macbook) {
+		margin: 0em 0em 0.5em 0em;
+		width: 100%;
+	}
+	&:hover, &:focus {
+		background-color: $calcolormedium;
+		color: white;
+	}
+	&:active {
+		background-color: $calcolordark;
 		color: white;
 	}
 }

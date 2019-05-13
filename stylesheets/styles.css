@@ -126,6 +126,22 @@ h2 {
   }
 }
 
+h3 {
+  color: #63636E;
+  font-weight: 300;
+  font-size: 1.75em;
+}
+@media (max-width: 999px) {
+  h3 {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 800px) {
+  h3 {
+    font-size: 1em;
+  }
+}
+
 a {
   text-decoration: none;
   color: #00c490;
@@ -171,7 +187,7 @@ ul {
   }
 }
 
-button {
+button.money-plz {
   font-size: 1em;
   height: 50px;
   width: 150px;
@@ -185,18 +201,46 @@ button {
   padding: 0em 1em 0em 1em;
 }
 @media (max-width: 1199px) {
-  button {
+  button.money-plz {
     margin: 0em 0em 1em 0em;
     padding: 0em 1em 0em 1em;
     width: 100%;
   }
 }
-button:hover, button:focus {
+button.money-plz:hover, button.money-plz:focus {
   background-color: #00694d;
   color: white;
 }
-button:active {
+button.money-plz:active {
   background-color: #003d2d;
+  color: white;
+}
+
+button.add-to-calendar {
+  font-size: 0.75em;
+  height: 25px;
+  width: 150px;
+  color: white;
+  background-color: #c40034;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  margin: 0em 0em 0.5em 0em;
+  padding: 0;
+}
+@media (max-width: 1199px) {
+  button.add-to-calendar {
+    margin: 0em 0em 0.5em 0em;
+    width: 100%;
+  }
+}
+button.add-to-calendar:hover, button.add-to-calendar:focus {
+  background-color: #8e0026;
+  color: white;
+}
+button.add-to-calendar:active {
+  background-color: #590017;
   color: white;
 }
 
