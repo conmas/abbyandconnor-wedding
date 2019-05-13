@@ -18,15 +18,33 @@
 
 <body>
 	<section class="left-half" id="carousel">
-		<div class="photo" id="lincoln-park" style="background-image:url(images/lincoln-park.jpeg)" alt="Lincoln Park, Chicago"><span class="photo-description">Lincoln Park, Chicago</span></div>
-		<div class="photo" id="mca" style="background-image:url(images/mca-wedding.jpg)" alt="Museum of Contemporary Art, Chicago"><span class="photo-description">Museum of Contemporary Art, Chicago</span></div>
-		<div class="photo" id="munich" style="background-image:url(images/munich.jpeg)" alt="Munich, Germany"><span class="photo-description">Munich, Germany</span></div>
-		<div class="photo" id="notre-dame" style="background-image:url(images/notre-dame.jpeg)" alt="Notre Dame, South Bend, Indiana"><span class="photo-description">Notre Dame, Indiana</span></div>
-		<div class="photo" id="parsons" style="background-image:url(images/parsons.jpeg)" alt="Parson's Chicken & Fish, Chicago"><span class="photo-description">Parson's Chicken &amp; Fish, Chicago</span></div>
-		<div class="photo" id="beer-garden" style="background-image:url(images/beer-garden.jpeg)" alt="Beer Garden, Munich"><span class="photo-description">Beer Garden, Munich</span></div>
-		<div class="photo" id="salsburg" style="background-image:url(images/salsburg.jpeg)" alt="Salsburg, Austria"><span class="photo-description">Salsburg, Austria</span></div>
-		<div class="photo" id="takeshita" style="background-image:url(images/takeshita.jpeg)" alt="Takeshita Street, Tokyo"><span class="photo-description">Takeshita Street, Tokyo</span></div>
-		<div class="photo" id="tokyo" style="background-image:url(images/tokyo-tower.jpeg)" alt="Tokyo, Japan"><span class="photo-description">Tokyo, Japan</span></div>
+		<div class="photo" style="background-image:url(images/lincoln-park.jpeg)" alt="Lincoln Park, Chicago">
+			<span class="photo-description">Lincoln Park, Chicago</span>
+		</div>
+		<div class="photo" style="background-image:url(images/mca-wedding.jpg)" alt="Museum of Contemporary Art, Chicago">
+			<span class="photo-description">Museum of Contemporary Art, Chicago</span>
+		</div>
+		<div class="photo" style="background-image:url(images/munich.jpeg)" alt="Munich, Germany">
+			<span class="photo-description">Munich, Germany</span>
+		</div>
+		<div class="photo" style="background-image:url(images/notre-dame.jpeg)" alt="Notre Dame, South Bend, Indiana">
+			<span class="photo-description">Notre Dame, Indiana</span>
+		</div>
+		<div class="photo" style="background-image:url(images/parsons.jpeg)" alt="Parson's Chicken & Fish, Chicago">
+			<span class="photo-description">Parson's Chicken &amp; Fish, Chicago</span>
+		</div>
+		<div class="photo" style="background-image:url(images/beer-garden.jpeg)" alt="Beer Garden, Munich">
+			<span class="photo-description">Beer Garden, Munich</span>
+		</div>
+		<div class="photo" style="background-image:url(images/salsburg.jpeg)" alt="Salsburg, Austria">
+			<span class="photo-description">Salsburg, Austria</span>
+		</div>
+		<div class="photo" style="background-image:url(images/takeshita.jpeg)" alt="Takeshita Street, Tokyo">
+			<span class="photo-description">Takeshita Street, Tokyo</span>
+		</div>
+		<div class="photo" style="background-image:url(images/tokyo-tower.jpeg)" alt="Tokyo, Japan">
+			<span class="photo-description">Tokyo, Japan</span>
+		</div>
 	</section>
 		
 		<script>
@@ -34,9 +52,9 @@
 
 			setInterval(function() { 
  				$('#carousel > div:first')
-					.fadeOut(2500)
+					.fadeOut(1500)
 				    .next()
-				    .fadeIn(2500)
+				    .fadeIn(1500)
 				    .end()
 				    .appendTo('#carousel')
 				}, 5000);
@@ -52,7 +70,7 @@
 					<li class="links"><a href="honeymoon.html">Help fund our honeymoon &rsaquo;</a></li>
 					<li class="links"><a href="rsvp.html">RSVP to the event &rsaquo;</a></li>
 				</ul>
-				<p class="footer">© 2019 Taxi Buddies.</p>
+				<p class="footer">© 2019 Taxi Buddies. <a href="README.md">About.</a></p>
 			</div>
 		</section>
 </body>
