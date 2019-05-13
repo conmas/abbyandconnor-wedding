@@ -19,23 +19,35 @@
 </head>
 
 <body>
-		<section class="left-half">
-			<div class="map" id="map"></div>
-		</section>
-		
-		<script>
-			mapboxgl.accessToken = 'pk.eyJ1IjoiY29ubWFzIiwiYSI6ImNqdm1vaTR6aTE5ZDg0OHBibzhtYjJteWcifQ.pDnyUVmCXJ-8E-7t4G_nwA';
-			var map = new mapboxgl.Map({
-				container: 'map',
-				style: 'mapbox://styles/mapbox/light-v9'
-			});
-		</script>
+	<section class="left-half" id="carousel">
+		<div class="photo" style="background-image:url(images/champagne.jpeg)" alt="Champagne">
+			<span class="photo-description">Abby opens a bottle of champagne on the night we closed on our new condo.</span>
+		</div>
+		<div class="photo" style="background-image:url(images/measuring.jpeg)" alt="Measuring">
+			<span class="photo-description">Abby measures some important things.</span>
+		</div>
+		<div class="photo" style="background-image:url(images/luxury.jpeg)" alt="Luxuriousness">
+			<span class="photo-description">Connor lives the life of luxury in the new master bathtub.</span>
+		</div>
+	</section>
+	
+	<script>
+		$("#carousel > div:gt(0)").hide();
+		setInterval(function() { 
+ 			$('#carousel > div:first')
+				.fadeOut(1500)
+			    .next()
+			    .fadeIn(1500)
+			    .end()
+			    .appendTo('#carousel')
+			}, 5000);
+	</script>
 
 		<section class="right-half">
 			<div class="text-container">
 				<a href="index.html" class="breadcrumbs">&lsaquo; Back</a>
-				<h1>We're heading to Italy.</h1>
-				<p>If you're searching for a link to a wedding registry, we've instead decided that we'd love contributions toward our honeymoon. If you're so inclined, there are a few options for ways to send us cash below, and you can choose the platform you prefer. Thanks so much!</p>
+				<h1>We don't have a&nbsp;wedding&nbsp;registry.<br>But we'd love&nbsp;help furnishing&nbsp;our new&nbsp;home.</h1>
+				<p>If you're searching for a link to a wedding registry, we've instead decided that we'd love contributions toward furnishing our first home together. If you're so inclined, there are a few options for ways to send us cash below, and you can choose the platform you prefer. Thanks so much!</p>
 				
 				<div class="button-area">
 					<a href="sms:connormason@icloud.com" target="_blank"><button class="money-plz" label="Apple Pay">Apple Pay</button></a>
