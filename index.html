@@ -8,9 +8,9 @@
 	<meta name="description" content="Join us in Chicago for an intimate wedding with our closest friends and family.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Connor Mason">
-<!--<link rel="apple-touch-icon" href="./images/[TBD]">
-	<link rel="icon" href="./images/[TBD]">
-	<link rel="shortcut icon" href="./images/[TBD]" /> -->
+<!--<link rel="apple-touch-icon" href="images/[TBD]">
+	<link rel="icon" href="images/[TBD]">
+	<link rel="shortcut icon" href="images/[TBD]" /> -->
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	
@@ -19,7 +19,7 @@
 <body>
 	
 		<!-- Left or top pane, depending on device. -->
-		<section id="left-half">
+		<section class="left-half" id="carousel">
 			<div class="photo" id="lincoln-park" style="background-image:url(images/lincoln-park.jpeg)" alt="Lincoln Park, Chicago"></div>
 			<div class="photo" id="hawaii" style="background-image:url(images/hawaii.jpeg)" alt="Waipi'o Valley, Hawaii"></div>
 			<div class="photo" id="beer-garden" style="background-image:url(images/beer-garden.jpeg)" alt="Beer Garden, Munich"></div>
@@ -33,21 +33,21 @@
 		</section>
 		
 		<script>
-			$("#left-half > div:gt(0)").hide();
+			$("#carousel > div:gt(0)").hide();
 
 			setInterval(function() { 
- 				$('#left-half > div:first')
+ 				$('#carousel > div:first')
 					.fadeOut(2500)
 				    .next()
 				    .fadeIn(2500)
 				    .end()
-				    .appendTo('#left-half')
+				    .appendTo('#carousel')
 				}, 5000);
 		</script>
 	
 		<!-- Right or bottom pane, depending on device. -->
-		<section id="right-half">
-			<div id="text-container">
+		<section class="right-half">
+			<div class="text-container">
 				<h1>Abby &amp; Connor<br>are getting married.</h1>
 				<h2>September 14, 2019</h2>
 				<p>Join us in Chicago for an intimate wedding with our closest friends and family. We're excited for a laid back day celebrating the people most important to us in our lives, and this website can help all of you plan for the day and know what to expect.</p>
@@ -58,7 +58,5 @@
 				</ul>
 			</div>
 		</section>
-		
-<!-- <svg src="images/chevron-right.svg"></svg> -->
 
 </body>

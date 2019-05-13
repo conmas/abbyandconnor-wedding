@@ -7,7 +7,7 @@ body {
   transition-duration: 5s;
 }
 
-#left-half {
+.left-half {
   position: absolute;
   width: 50%;
   height: 100%;
@@ -17,34 +17,34 @@ body {
   text-align: center;
 }
 @media (max-width: 999px) {
-  #left-half {
+  .left-half {
     width: 100%;
     height: 50%;
   }
 }
 @media (max-width: 800px) {
-  #left-half {
+  .left-half {
     width: 100%;
     height: 50%;
   }
 }
 @media (max-width: 600px) {
-  #left-half {
+  .left-half {
     width: 100%;
     height: 50%;
   }
 }
-#left-half div.photo {
+.left-half div.photo {
   height: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-#left-half div.map {
+.left-half div.map {
   height: 100%;
 }
 
-#right-half {
+.right-half {
   position: absolute;
   width: 50%;
   height: 100%;
@@ -52,25 +52,24 @@ body {
   right: 0;
 }
 @media (max-width: 999px) {
-  #right-half {
+  .right-half {
     width: 100%;
     height: 50%;
   }
 }
 @media (max-width: 800px) {
-  #right-half {
+  .right-half {
     width: 100%;
     height: 50%;
   }
 }
 @media (max-width: 600px) {
-  #right-half {
+  .right-half {
     width: 100%;
     height: 50%;
   }
 }
-
-#text-container {
+.right-half .text-container {
   padding: 3em;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -78,68 +77,69 @@ body {
   color: black;
 }
 @media (max-width: 999px) {
-  #text-container {
+  .right-half .text-container {
     padding: 2em;
   }
 }
 @media (max-width: 800px) {
-  #text-container {
+  .right-half .text-container {
     padding: 1.5em;
   }
 }
 @media (max-width: 600px) {
-  #text-container {
+  .right-half .text-container {
     padding: 0em 1.5em 1.5em 1.5em;
   }
 }
-
-h1 {
+.right-half .text-container h1 {
   font-weight: 700;
   font-size: 3em;
   line-height: 1.2em;
 }
 @media (max-width: 800px) {
-  h1 {
+  .right-half .text-container h1 {
     font-size: 2.75em;
   }
 }
 @media (max-width: 600px) {
-  h1 {
+  .right-half .text-container h1 {
     font-size: 2em;
   }
 }
-
-h2 {
+.right-half .text-container h2 {
   color: #63636E;
   font-weight: 500;
   font-size: 1.75em;
   line-height: 1.2em;
 }
 @media (max-width: 999px) {
-  h2 {
+  .right-half .text-container h2 {
     font-size: 1.5em;
   }
 }
 @media (max-width: 800px) {
-  h2 {
+  .right-half .text-container h2 {
     font-size: 1em;
   }
 }
-
-p, li * {
+.right-half .text-container a {
+  text-decoration: none;
+  color: #00c490;
+}
+.right-half .text-container p, .right-half .text-container li * {
   font-weight: 400;
   font-size: 1.25em;
   line-height: 1.5em;
   max-width: 750px;
 }
-
-.table-view li {
+.right-half .text-container .table-view li {
   list-style: none;
   padding-left: none;
   padding-bottom: 1em;
 }
-.table-view a {
+.right-half .text-container .breadcrumbs {
   text-decoration: none;
+  color: #00c490;
 }
 
 /*# sourceMappingURL=styles.css.map */
