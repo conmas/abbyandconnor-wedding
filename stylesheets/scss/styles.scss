@@ -241,6 +241,9 @@ button.add-to-calendar {
 	font-weight: 500;
 	text-decoration: none;
 	color: $accentcolor;
+	@include breakpoint(iphone) {
+		padding-top: 30em;
+	}
 }
 
 .footer {

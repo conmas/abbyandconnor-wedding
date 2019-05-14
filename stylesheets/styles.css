@@ -280,6 +280,11 @@ button.add-to-calendar:active {
   text-decoration: none;
   color: #00c490;
 }
+@media (max-width: 600px) {
+  .breadcrumbs {
+    padding-top: 30em;
+  }
+}
 
 .footer {
   font-size: 0.5em;
