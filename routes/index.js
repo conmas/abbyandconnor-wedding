@@ -49,7 +49,7 @@ router.post('/', [
 		let data = {
 			from: req.body.email,
 			to: process.env.MAILGUN_TO_ADDRESS,
-			subject: 'A Connote request from ' + req.body.email,
+			subject: 'New RSVP from ' + req.body.email,
 			text: req.body.message
 		};
 
@@ -66,7 +66,7 @@ router.post('/', [
 
 });
 
-router.get('/thanks', function(req, res, next) {
+router.get('includes/thanks', function(req, res, next) {
 	res.render('includes/thanks');
 })
 

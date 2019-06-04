@@ -193,6 +193,9 @@ p, li {
   max-width: 750px;
   padding-bottom: 1em;
 }
+p .error, li .error {
+  color: accentcolor;
+}
 
 ul {
   list-style: none;

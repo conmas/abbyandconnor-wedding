@@ -3,7 +3,7 @@ extends layout
 block content
 	
 	section.left-half
-		.map(id='map')
+		div(class='map', id='map')
 
 	script.
 		mapboxgl.accessToken = 'pk.eyJ1IjoiY29ubWFzIiwiYSI6ImNqdm1vaTR6aTE5ZDg0OHBibzhtYjJteWcifQ.pDnyUVmCXJ-8E-7t4G_nwA';
@@ -18,7 +18,7 @@ block content
 
 	section.right-half
 		.text-container
-			a.breadcrumbs(href='index.html') &lsaquo; Back
+			a(class='breadcrumbs', href='/') &lsaquo; Back
 			h1 Details about the big&nbsp;day(s).
 			p.
 				This page is under construction. Overall description will go here. This page is under construction. Overall description will go here. This page is under construction. Overall description will go here.
@@ -39,5 +39,5 @@ block content
 				This page is under construction. Chicago event description will go here. This page is under construction. Chicago event description will go here.
 
 			p.footer.
-			| © 2019 Taxi Buddies.
+			| © 2019 Taxi Buddies. 
 			a(href="README.md") About.
