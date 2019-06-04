@@ -5,11 +5,11 @@ form(action='/rsvp', method='POST', autocomplete='off')
 		label.text(for='name') Name
 		.underline
 	
-	fieldset
+	fieldset.switch
 		label.switch
-			input.switch(type='checkbox')
+			input.switch(type='checkbox', checked)
 			span.slider
-		p.switchLabel Will you be joining us on September 14?
+		p.switchLabel I'll be there on September 14!
 
 	fieldset
 		input.text(type='text', name='message', required)

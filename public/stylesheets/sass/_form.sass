@@ -21,11 +21,11 @@ fieldset
 
 label.text
 	position: absolute
-	top: .85em
+	top: 1.25em
 	color: $gray
 	font-weight: 400
 	font-size: 1.25em
-	line-height: 1.5em
+	line-height: 1.25em
 	transform-origin: left
 	transition: $transition-speed
 
@@ -51,11 +51,13 @@ label.switch
 	height: 34px
 
 input.switch
-	display:none
+	display: none
 
 .switchLabel
 	padding-left: 75px
 	padding-top: 0
+
+// This is the background of the switch.
 
 .slider 
 	position: absolute
@@ -68,6 +70,9 @@ input.switch
 	-webkit-transition: $transition-speed
 	transition: $transition-speed
 	border-radius: 34px
+
+	// This is the circle on the switch itself.	
+
 	&:before 
 		position: absolute
 		content: ""

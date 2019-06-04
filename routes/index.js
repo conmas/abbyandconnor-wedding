@@ -29,13 +29,8 @@ router.get('/rsvp', function(req, res, next) {
     res.render('rsvp', { title: 'RSVP' });
 });
 
-router.post('/', [
-	check('first', 'Please enter normal characters only.').isAscii().trim(),
-	check('first', 'Please enter your first name.').isLength({min:1}).trim(),
-	check('last', 'Please enter normal characters only.').isAscii().trim(),
-	check('last', 'Please enter your last name.').isLength({min:1}).trim(),
-	check('email', 'Please enter an email address.').isLength({min:1}).trim(),
-	check('email', 'Please enter a valid email address.').isEmail().trim(),
+router.post('/rsvp', [
+	check('name', 'Please enter your name.').isLength({min:1}).trim(),
 	check('message', 'Please enter a message.').isLength({min:1}).trim()
 	], function(req, res, next) {
 

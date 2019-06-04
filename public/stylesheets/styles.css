@@ -8,11 +8,11 @@ fieldset {
 
 label.text {
   position: absolute;
-  top: 0.85em;
+  top: 1.25em;
   color: #17171d;
   font-weight: 400;
   font-size: 1.25em;
-  line-height: 1.5em;
+  line-height: 1.25em;
   transform-origin: left;
   transition: all 0.5s ease;
 }
