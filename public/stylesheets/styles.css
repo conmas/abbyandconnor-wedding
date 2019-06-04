@@ -302,7 +302,26 @@ a .breadcrumbs {
     padding-top: 30em;
   }
 }
+a .add-to-calendar {
+  color: red;
+}
 
+.event-container {
+  width: 100%;
+  height: 50%;
+}
+.left-arrow {
+  float: left;
+}
+
+.right-arrow {
+  float: right;
+}
+
+.event {
+  float: left;
+  background-color: #e7e7e9;
+}
 p, li {
   font-weight: 400;
   font-size: 1.25em;

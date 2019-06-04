@@ -17,6 +17,17 @@ html
 					.end()
 					.appendTo('.left-half')
 				}, 5000);
+
+		script.
+			mapboxgl.accessToken = 'pk.eyJ1IjoiY29ubWFzIiwiYSI6ImNqdm1vaTR6aTE5ZDg0OHBibzhtYjJteWcifQ.pDnyUVmCXJ-8E-7t4G_nwA';
+			var map = new mapboxgl.Map({
+				container: 'map',
+				style: 'mapbox://styles/mapbox/streets-v9'			
+			});
+			
+			var littleGoat = new mapboxgl.LngLat(41.884632,-87.648470)
+				
+			map.panTo(littleGoat);
 				
 		section.right-half
 			.text-container
