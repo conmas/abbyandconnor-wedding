@@ -1,4 +1,112 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans");
+fieldset {
+  position: relative;
+  padding-left: 0px;
+  padding-right: 0px;
+  border: none;
+}
+
+label.text {
+  position: absolute;
+  top: 0.85em;
+  color: #17171d;
+  font-weight: 400;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  transform-origin: left;
+  transition: all 0.5s ease;
+}
+
+input.text {
+  background-color: transparent;
+  color: #17171d;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  font-weight: 400;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  width: 100%;
+  height: 60px;
+  transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+input.text:focus ~ label {
+  color: #00c490;
+  top: 0;
+  transform: scale(0.6, 0.6);
+}
+input.text:focus ~ .underline {
+  background-position: 0 0;
+}
+input.text:valid ~ label {
+  color: #00c490;
+  top: 0;
+  transform: scale(0.6, 0.6);
+}
+
+label.switch {
+  position: absolute;
+  display: inline-block;
+  margin-top: 20px;
+  width: 60px;
+  height: 34px;
+}
+
+.switchLabel {
+  padding-left: 75px;
+  padding-top: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+}
+
+input.switch:checked + .slider {
+  background-color: #00c490;
+}
+
+input.switch:focus + .slider {
+  box-shadow: 0 0 1px #00c490;
+}
+
+input.switch:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -webkit-transform--ms-transform: translateX(26px);
+  -webkit-transform--ms-transform-transform: translateX(26px);
+}
+
+.underline {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #00c490 50%, transparent 50%);
+  background-color: #63636E;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: all 0.5s ease;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -26,8 +134,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.photo-description {
+.photo span {
   position: absolute;
   bottom: 1em;
   -ms-text-size-adjust: 100%;
@@ -42,18 +149,18 @@ body {
   text-shadow: 0px 0px 5px black;
 }
 @media (max-width: 1199px) {
-  .photo-description {
+  .photo span {
     font-size: 1.25em;
   }
 }
 @media (max-width: 999px) {
-  .photo-description {
+  .photo span {
     padding-left: 2em;
     top: 1em;
   }
 }
 @media (max-width: 800px) {
-  .photo-description {
+  .photo span {
     padding-left: 1.5em;
     font-size: 1em;
   }
@@ -177,13 +284,23 @@ a {
   text-decoration: none;
   color: #00c490;
   cursor: pointer;
-  transition: all 0.6s ease;
+  transition: all 0.5s ease;
 }
 a:hover, a:focus {
-  color: #00694d;
+  color: #007858;
 }
 a:active {
-  color: #003d2d;
+  color: #002b20;
+}
+a .breadcrumbs {
+  font-weight: 500;
+  text-decoration: none;
+  color: #00c490;
+}
+@media (max-width: 600px) {
+  a .breadcrumbs {
+    padding-top: 30em;
+  }
 }
 
 p, li {
@@ -192,9 +309,6 @@ p, li {
   line-height: 1.5em;
   max-width: 750px;
   padding-bottom: 1em;
-}
-p .error, li .error {
-  color: accentcolor;
 }
 
 ul {
@@ -221,7 +335,7 @@ ul {
   }
 }
 
-button.money-plz {
+button, .submit {
   font-size: 1em;
   height: 50px;
   width: 150px;
@@ -230,63 +344,24 @@ button.money-plz {
   border: none;
   border-radius: 0.5em;
   cursor: pointer;
-  transition: all 0.6s ease;
+  transition: all 0.5s ease;
   margin: 0em 1em 0em 0em;
   padding: 0em 1em 0em 1em;
 }
 @media (max-width: 1199px) {
-  button.money-plz {
+  button, .submit {
     margin: 0em 0em 1em 0em;
     padding: 0em 1em 0em 1em;
     width: 100%;
   }
 }
-button.money-plz:hover, button.money-plz:focus {
-  background-color: #00694d;
+button:hover, button:focus, .submit:hover, .submit:focus {
+  background-color: #007858;
   color: white;
 }
-button.money-plz:active {
-  background-color: #003d2d;
+button:active, .submit:active {
+  background-color: #002b20;
   color: white;
-}
-
-button.add-to-calendar {
-  font-size: 0.75em;
-  height: 25px;
-  width: 150px;
-  color: white;
-  background-color: #c40034;
-  border: none;
-  border-radius: 0.5em;
-  cursor: pointer;
-  transition: all 0.6s ease;
-  margin: 0em 0em 0.5em 0em;
-  padding: 0;
-}
-@media (max-width: 1199px) {
-  button.add-to-calendar {
-    margin: 0em 0em 0.5em 0em;
-    width: 100%;
-  }
-}
-button.add-to-calendar:hover, button.add-to-calendar:focus {
-  background-color: #8e0026;
-  color: white;
-}
-button.add-to-calendar:active {
-  background-color: #590017;
-  color: white;
-}
-
-.breadcrumbs {
-  font-weight: 500;
-  text-decoration: none;
-  color: #00c490;
-}
-@media (max-width: 600px) {
-  .breadcrumbs {
-    padding-top: 30em;
-  }
 }
 
 .footer {

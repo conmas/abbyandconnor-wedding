@@ -1,0 +1,101 @@
+=field-state($state)
+	transition: $transition-speed
+	@if $state == focus
+		&:focus ~ label
+			color: $accentcolor
+			top: 0
+			transform: scale(0.6, 0.6)
+		&:focus ~ .underline
+			background-position: 0 0
+	@else if $state == completed
+		&:valid ~ label
+			color: $accentcolor
+			top: 0
+			transform: scale(0.6, 0.6)
+
+fieldset
+	position: relative
+	padding-left: 0px
+	padding-right: 0px
+	border: none
+
+label.text
+	position: absolute
+	top: .85em
+	color: $gray
+	font-weight: 400
+	font-size: 1.25em
+	line-height: 1.5em
+	transform-origin: left
+	transition: $transition-speed
+
+input.text
+	background-color: transparent
+	color: $gray
+	border: none
+	border-radius: 0
+	outline: none
+	font-weight: 400
+	font-size: 1.25em
+	line-height: 1.5em
+	width: 100%
+	height: 60px
+	+field-state(focus)
+	+field-state(completed)
+
+label.switch 
+	position: absolute
+	display: inline-block
+	margin-top: 20px
+	width: 60px
+	height: 34px
+
+input.switch
+	display:none
+
+.switchLabel
+	padding-left: 75px
+	padding-top: 0
+
+.slider 
+	position: absolute
+	cursor: pointer
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: #ccc
+	-webkit-transition: $transition-speed
+	transition: $transition-speed
+	border-radius: 34px
+	&:before 
+		position: absolute
+		content: ""
+		height: 26px
+		width: 26px
+		left: 4px
+		bottom: 4px
+		background-color: white
+		-webkit-transition: $transition-speed
+		transition: $transition-speed
+		border-radius: 50%
+
+input.switch:checked + .slider 
+	background-color: #00c490
+
+input.switch:focus + .slider 
+	box-shadow: 0 0 1px #00c490
+
+input.switch:checked + .slider:before 
+	-webkit-transform: translateX(26px)
+		-ms-transform: translateX(26px)
+			transform: translateX(26px)
+
+.underline
+	width: 100%
+	height: 2px
+	background: linear-gradient(to right, $accentcolor 50%, transparent 50%)
+	background-color: $lightgray
+	background-size: 200% 100%
+	background-position: 100% 0
+	transition: $transition-speed 

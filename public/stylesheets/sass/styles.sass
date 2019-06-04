@@ -1,6 +1,9 @@
-@import "mixins"
-@import "colors"
-@import "fonts"
+@import mixins
+@import colors
+@import form
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans')
+$font-stack: -apple-system, BlinkMacSystemFont, 'Work Sans', sans-serif
 
 body
 	width: 100%
@@ -14,7 +17,7 @@ body
 	left: 0
 	top: 0
 	overflow: hidden
-	@include breakpoint(ipadpro)
+	+breakpoint(ipadpro)
 		width: 100%
 		height: 50%
 
@@ -23,28 +26,27 @@ body
 	background-position: center center
 	background-repeat: no-repeat
 	background-size: cover
-
-.photo-description
-	position: absolute
-	bottom: 1em
-	-ms-text-size-adjust: 100%
-	-webkit-text-size-adjust: 100%
-	font-family: $font-stack
-	color: white
-	font-size: 2em
-	font-weight: 500
-	text-align: left
-	padding-left: 2em
-	padding-right: 2em
-	text-shadow: 0px 0px 5px black
-	@include breakpoint(macbook)
-		font-size: 1.25em
-	@include breakpoint(ipadpro)
+	span
+		position: absolute
+		bottom: 1em
+		-ms-text-size-adjust: 100%
+		-webkit-text-size-adjust: 100%
+		font-family: $font-stack
+		color: white
+		font-size: 2em
+		font-weight: 500
+		text-align: left
 		padding-left: 2em
-		top: 1em
-	@include breakpoint(ipad)
-		padding-left: 1.5em
-		font-size: 1em
+		padding-right: 2em
+		text-shadow: 0px 0px 5px black
+		+breakpoint(macbook)
+			font-size: 1.25em
+		+breakpoint(ipadpro)
+			padding-left: 2em
+			top: 1em
+		+breakpoint(ipad)
+			padding-left: 1.5em
+			font-size: 1em
 	
 .map
 	height: 100%
@@ -67,13 +69,13 @@ body
 	height: 100%
 	bottom: 0
 	right: 0
-	@include breakpoint(ipadpro)
+	+breakpoint(ipadpro)
 		width: 100%
 		height: 50%
-	@include breakpoint(ipad)
+	+breakpoint(ipad)
 		width: 100%
 		height: 50%
-	@include breakpoint(iphone)
+	+breakpoint(iphone)
 		width: 100%
 		height: 50%
 	.text-container
@@ -82,20 +84,20 @@ body
 		-webkit-text-size-adjust: 100%
 		font-family: $font-stack
 		color: black
-		@include breakpoint(ipadpro)
+		+breakpoint(ipadpro)
 			padding: 2em
-		@include breakpoint(ipad)
+		+breakpoint(ipad)
 			padding: 1.5em
-		@include breakpoint(iphone)
+		+breakpoint(iphone)
 			padding: 0em 1.5em 1.5em 1.5em
 
 h1
 	font-weight: 700
 	font-size: 3em
 	line-height: 1.2em
-	@include breakpoint(ipad)
+	+breakpoint(ipad)
 		font-size: 2.75em
-	@include breakpoint(iphone)
+	+breakpoint(iphone)
 		font-size: 2em
 
 h2
@@ -103,29 +105,35 @@ h2
 	font-weight: 500
 	font-size: 1.75em
 	line-height: 1.2em
-	@include breakpoint(ipadpro)
+	+breakpoint(ipadpro)
 		font-size: 1.5em
-	@include breakpoint(ipad)
+	+breakpoint(ipad)
 		font-size: 1.25em
 
 h3
 	color: $lightgray
 	font-weight: 300
 	font-size: 1.75em
-	@include breakpoint(ipadpro)
+	+breakpoint(ipadpro)
 		font-size: 1.5em
-	@include breakpoint(ipad)
+	+breakpoint(ipad)
 		font-size: 1em
 
 a
 	text-decoration: none
 	color: $accentcolor
 	cursor: pointer
-	transition: all 0.6s ease
+	transition: $transition-speed
 	&:hover, &:focus
-		color: $accentcolormedium
+		color: darken($accentcolor, 15%)
 	&:active
-		color: $accentcolordark
+		color: darken($accentcolor, 30%)
+	.breadcrumbs
+		font-weight: 500
+		text-decoration: none
+		color: $accentcolor
+		+breakpoint(iphone)
+			padding-top: 30em
 
 p, li
 	font-weight: 400
@@ -133,8 +141,6 @@ p, li
 	line-height: 1.5em
 	max-width: 750px
 	padding-bottom: 1em
-	.error 
-		color: accentcolor
 		
 ul
 	list-style: none
@@ -147,12 +153,12 @@ ul
 	align-items: stretch
 	align-content: center
 	padding: 1em 0em 5em 0em
-	@include breakpoint(imac)
+	+breakpoint(imac)
 		flex-direction: row wrap
-	@include breakpoint(macbook)
+	+breakpoint(macbook)
 		flex-direction: column
 		
-button.money-plz
+button, .submit
 	font-size: 1em
 	height: 50px
 	width: 150px
@@ -161,48 +167,19 @@ button.money-plz
 	border: none
 	border-radius: .5em
 	cursor: pointer
-	transition: all 0.6s ease
+	transition: $transition-speed
 	margin: 0em 1em 0em 0em
 	padding: 0em 1em 0em 1em
-	@include breakpoint(macbook)
+	+breakpoint(macbook)
 		margin: 0em 0em 1em 0em
 		padding: 0em 1em 0em 1em
 		width: 100%
 	&:hover, &:focus
-		background-color: $accentcolormedium
+		background-color: darken($accentcolor, 15%)
 		color: white
 	&:active
-		background-color: $accentcolordark
+		background-color: darken($accentcolor, 30%)
 		color: white
-
-button.add-to-calendar
-	font-size: .75em
-	height: 25px
-	width: 150px
-	color: white
-	background-color: $calcolor
-	border: none
-	border-radius: .5em
-	cursor: pointer
-	transition: all 0.6s ease
-	margin: 0em 0em 0.5em 0em
-	padding: 0
-	@include breakpoint(macbook)
-		margin: 0em 0em 0.5em 0em
-		width: 100%
-	&:hover, &:focus
-		background-color: $calcolormedium
-		color: white
-	&:active
-		background-color: $calcolordark
-		color: white
-
-.breadcrumbs
-	font-weight: 500
-	text-decoration: none
-	color: $accentcolor
-	@include breakpoint(iphone)
-		padding-top: 30em
 
 .footer
 	font-size: 0.5em
