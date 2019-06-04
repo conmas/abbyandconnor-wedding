@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	section.left-half
+		.temp
+
+	section.right-half
+		.text-container
+			a(class='breadcrumbs', href='/') &lsaquo; Return home
+			h1=error.status
+			h2=message
+			pre #{error.stack}
