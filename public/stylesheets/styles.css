@@ -319,9 +319,11 @@ a .add-to-calendar {
 }
 
 .event {
+  display: inline-block;
   float: left;
   background-color: #e7e7e9;
 }
+
 p, li {
   font-weight: 400;
   font-size: 1.25em;

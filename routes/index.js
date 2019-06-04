@@ -29,7 +29,7 @@ router.get('/rsvp', function(req, res, next) {
     res.render('rsvp', { title: 'RSVP' });
 });
 
-router.post('/rsvp', [
+router.post('/', [
 	check('name', 'Please enter your name.').isLength({min:1}).trim(),
 	check('message', 'Please enter a message.').isLength({min:1}).trim()
 	], function(req, res, next) {
@@ -42,9 +42,9 @@ router.post('/rsvp', [
 
   		// if no validation errors, then create the email
 		let data = {
-			from: req.body.email,
+			from: req.body.name,
 			to: process.env.MAILGUN_TO_ADDRESS,
-			subject: 'New RSVP from ' + req.body.email,
+			subject: 'New RSVP from ' + req.body.name,
 			text: req.body.message
 		};
 
