@@ -1,15 +1,24 @@
 doctype html
 html
-	include includes/head
-	// include includes/mixins
+	head
+		include includes/head
 
 	body
-		block content
+		section.left-half
+			block left
 
-		// section.left-half
-			block left-content
-		// section right-half
-			block right-content
-			p.footer
-				| © 2019 Taxi Buddies. 
-				a(href="README.md") About.
+		script.
+			$(".left-half > div:gt(0)").hide();
+			setInterval(function() { 
+				$('.left-half > div:first')
+					.fadeOut(1500)
+					.next()
+					.fadeIn(1500)
+					.end()
+					.appendTo('.left-half')
+				}, 5000);
+				
+		section.right-half
+			.text-container
+				block right
+				include includes/footer

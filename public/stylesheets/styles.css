@@ -20,14 +20,14 @@ body {
   }
 }
 
-div.photo {
+.photo {
   height: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-span.photo-description {
+.photo-description {
   position: absolute;
   bottom: 1em;
   -ms-text-size-adjust: 100%;
@@ -42,29 +42,29 @@ span.photo-description {
   text-shadow: 0px 0px 5px black;
 }
 @media (max-width: 1199px) {
-  span.photo-description {
+  .photo-description {
     font-size: 1.25em;
   }
 }
 @media (max-width: 999px) {
-  span.photo-description {
+  .photo-description {
     padding-left: 2em;
     top: 1em;
   }
 }
 @media (max-width: 800px) {
-  span.photo-description {
+  .photo-description {
     padding-left: 1.5em;
     font-size: 1em;
   }
 }
 
-div.map {
+.map {
   height: 100%;
   width: 100%;
 }
 
-div.temp {
+.temp {
   width: 100px;
   height: 100px;
   background: #f09433;
