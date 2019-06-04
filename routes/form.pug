@@ -1,0 +1,20 @@
+.box
+	form(action='/', method='POST', autocomplete='off')
+		fieldset.left
+			input.text(type='text', name='first', required)
+			label(for='first') First
+			.underline
+		fieldset.right
+			input.text(type='text', name='last', required)
+			label(for='last') Last
+			.underline
+		fieldset
+			input.text(type='email', name='email', required)
+			label(for='email') Email
+			.underline
+		fieldset
+			input.text(name='message', required)
+			label(for='message') How can we help?
+			.underline
+		fieldset
+			input.submit(type='button', value='Submit')
