@@ -1,44 +1,16 @@
 extends layout
 
 block left
-	.photo(style='background-image:url(images/kaiser-tiger.jpeg)', alt='Kaiser Tiger')
-		span Kaiser Tiger
-	.photo(style='background-image:url(images/ace-hotel.jpeg)', alt='Ace Hotel, Chicago')
-		span Ace Hotel, Chicago
-	.photo(style='background-image:url(images/little-goat.jpeg)', alt='Little Goat Kitchen')
-		span Little Goat Kitchen
+	+photo('background-image:url(images/kaiser-tiger.jpeg)','Kaiser Tiger')
+	+photo('background-image:url(images/ace-hotel.jpeg)','Ace Hotel, Chicago')
+	+photo('background-image:url(images/little-goat.jpeg)','Little Goat Kitchen')
 
 block right
-	include includes/breadcrumbs
+	+breadcrumbs
 	h1 Details about the big&nbsp;day(s).
 	p We can’t wait for you to join us! Below is all the information you should need. We’ll add links to the hotel room block when they’re available, so check back soon!
 	
-	table(style='width: 100%; margin-bottom: 2em; margin-left: 0')
-		tr(style='width: 50%')
-			td(style='width: 50%')
-				a(href='https://apple.co/2XuUCrp', target='_blank') stay &rsaquo;
-			td(style='width: 50%') 
-				a(href='https://apple.co/2XuUCrp', target='_blank') <span style="font-weight: 700; color: black">The Ace Hotel</span> &nearr;
-		tr(style='width: 50%')
-			td(style='width: 50%') Friday & Saturday
-			td(style='width: 50%') 311 N Morgan St
-	
-	table(style='width: 100%; margin-bottom: 2em; margin-left: 0')
-		tr(style='width: 50%')
-			td(style='width: 50%') 
-				a(href='https://apple.co/2QY7XWI', target='_blank') welcome reception &rsaquo;
-			td(style='width: 50%')
-				a(href='https://apple.co/2QY7XWI', target='_blank') <span style="font-weight: 700; color: black">Kaiser Tiger</span> &nearr;
-		tr(style='width: 50%')
-			td(style='width: 50%') September 13 @ 7pm
-			td(style='width: 50%') 1415 W Randolph St	
-	
-	table(style='width: 100%; margin-left: 0')
-		tr(style='width: 50%')
-			td(style='width: 50%')
-				a(href='https://apple.co/2wI1rKi', target='_blank') celebrate &rsaquo;
-			td(style='width: 50%') 
-				a(href='https://apple.co/2wI1rKi', target='_blank') <span style="font-weight: 700; color: black">Little Goat Kitchen</span> &nearr;
-		tr(style='width: 50%')
-			td(style='width: 50%') September 14 @ 7pm
-			td(style='width: 50%') 820 W Randolph St
+	table
+		+venue('The Ace Hotel','stay','https://apple.co/2XuUCrp','Friday & Saturday','311 N Morgan St')
+		+venue('Kaiser Tiger','welcome reception','https://apple.co/2QY7XWI','September 13 @ 7pm','1415 W Randolph St')
+		+venue('Little Goat Kitchen','celebrate','https://apple.co/2wI1rKi','September 14 @ 6pm','820 W Randolph St')

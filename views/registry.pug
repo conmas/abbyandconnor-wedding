@@ -1,15 +1,12 @@
 extends layout
 
 block left
-	.photo(style='background-image:url(images/champagne.jpeg)', alt='Abby opens a bottle of champagne on the night we closed on our new condo.')
-		span Abby opens a bottle of champagne on the night we closed on our new condo.
-	.photo(style='background-image:url(images/measuring.jpeg)', alt='Abby measures some important things.')
-		span Abby measures some important things.
-	.photo(style='background-image:url(images/luxury.jpeg)', alt='Connor lives the life of luxury in the new master bathtub.')
-		span Connor lives the life of luxury in the new master bathtub.
+	+photo('background-image:url(images/champagne.jpeg)','Abby opens a bottle of champagne on the night we closed on our new condo.')
+	+photo('background-image:url(images/measuring.jpeg)','Abby measures some important things.')
+	+photo('background-image:url(images/luxury.jpeg)','Connor lives the life of luxury in the new master bathtub.')
 
 block right
-	include includes/breadcrumbs
+	+breadcrumbs
 	h1 This page is coming soon.
 	p Check back soon. We're still building this website, and we'll add more details as the day approaches.
 

@@ -4,6 +4,7 @@ html
 		include includes/head
 
 	body
+		include includes/mixins
 		section.left-half
 			block left
 
@@ -17,20 +18,8 @@ html
 					.end()
 					.appendTo('.left-half')
 				}, 5000);
-
-		script.
-			var dotenv = require('dotenv').config();
-			mapboxgl.accessToken = process.env.MAPBOX_ACCESS_TOKEN;
-			var map = new mapboxgl.Map({
-				container: 'map',
-				style: 'mapbox://styles/mapbox/streets-v9'			
-			});
-			
-			var littleGoat = new mapboxgl.LngLat(41.884632,-87.648470)
-				
-			map.panTo(littleGoat);
 				
 		section.right-half
 			.text-container
 				block right
-				include includes/footer
+				+footer

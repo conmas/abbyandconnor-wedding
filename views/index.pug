@@ -1,34 +1,23 @@
 extends layout
 
 block left
-	.photo(style='background-image:url(images/bucktown.jpeg)', alt='Chicago, the night we got engaged')
-		span Chicago, the night we got engaged
-	.photo(style='background-image:url(images/lincoln-park.jpeg)', alt='Lincoln Park, Chicago')
-		span Lincoln Park, Chicago
-	.photo(style='background-image:url(images/mca-wedding.jpg)', alt='Museum of Contemporary Art, Chicago')
-		span Museum of Contemporary Art, Chicago
-	.photo(style='background-image:url(images/cleveland.jpeg)', alt='Cleveland, Ohio')
-		span Cleveland, Ohio
-	.photo(style='background-image:url(images/munich.jpeg)', alt='Munich, Germany')
-		span Munich, Germany
-	.photo(style='background-image:url(images/notre-dame.jpeg)', alt='Notre Dame, Indiana')
-		span Notre Dame, Indiana
-	.photo(style='background-image:url(images/parsons.jpeg)', alt='Parson\'s Chicken & Fish, Chicago')
-		span Parson's Chicken &amp; Fish, Chicago
-	.photo(style='background-image:url(images/beer-garden.jpeg)', alt='Beer Garden, Munich')
-		span Beer Garden, Munich
-	.photo(style='background-image:url(images/salsburg.jpeg)', alt='Salsburg, Austria')
-		span Salsburg, Austria
-	.photo(style='background-image:url(images/takeshita.jpeg)', alt='Takeshita Street, Tokyo')
-		span Takeshita Street, Tokyo
-	.photo(style='background-image:url(images/tokyo-tower.jpeg)', alt='Tokyo, Japan')
-		span Tokyo, Japan
+	+photo('background-image:url(images/bucktown.jpeg)','Chicago, the night we got engaged')
+	+photo('background-image:url(images/lincoln-park.jpeg)','Lincoln Park, Chicago')
+	+photo('background-image:url(images/mca-wedding.jpg)','Museum of Contemporary Art, Chicago')
+	+photo('background-image:url(images/cleveland.jpeg)','Cleveland, Ohio')
+	+photo('background-image:url(images/munich.jpeg)','Munich, Germany')
+	+photo('background-image:url(images/notre-dame.jpeg)','Notre Dame, Indiana')
+	+photo('background-image:url(images/parsons.jpeg)','Parson\'s Chicken & Fish, Chicago')
+	+photo('background-image:url(images/beer-garden.jpeg)','Beer Garden, Munich')
+	+photo('background-image:url(images/salsburg.jpeg)','Salsburg, Austria')
+	+photo('background-image:url(images/takeshita.jpeg)','Takeshita Street, Tokyo')
+	+photo('background-image:url(images/tokyo-tower.jpeg)','Tokyo, Japan')
 		
 block right
 	h1 Abby &amp; Connor<br>are getting married.
 	h2 September 14, 2019
-	p.
-		Join us in Chicago for an intimate wedding with our closest friends and family. We're excited for a laid back day celebrating the people most important to us in our lives, and this website can help all of you plan for the day and know what to expect.
+	p Join us in Chicago for an intimate wedding with our closest friends and family. We're excited for a laid back day celebrating the people most important to us in our lives, and this website can help all of you plan for the day and know what to expect.
+	
 	ul.links
 		li.links
 			a(href='/details') Details about the day &rsaquo;
