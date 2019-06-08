@@ -1,42 +1,44 @@
 extends layout
 
 block left
-	.map(id='map')
+	.photo(style='background-image:url(images/kaiser-tiger.jpeg)', alt='Kaiser Tiger')
+		span Kaiser Tiger
+	.photo(style='background-image:url(images/ace-hotel.jpeg)', alt='Ace Hotel, Chicago')
+		span Ace Hotel, Chicago
+	.photo(style='background-image:url(images/little-goat.jpeg)', alt='Little Goat Kitchen')
+		span Little Goat Kitchen
 
 block right
 	include includes/breadcrumbs
-	h1 This page is coming soon.
-	p Check back soon. We're still building this website, and we'll add more details as the day approaches.
-
-	//block right
-		include includes/breadcrumbs
-		h1 Details about the big&nbsp;day(s).
-		p This page is under construction. Overall description will go here. This page is under construction. Overall description will go here. This page is under construction. Overall description will go here.
-		span.left-arrow left
-		span.right-arrow right
-		.event-container
-			.event
-				h3 Reception in Omaha
-				a.add-to-calendar(href='/') Add to Calendar
-				p This page is under construction. Omaha event description will go here. This page is under construction. Omaha event description will go here.
-			.event
-				h3 Reception in Cleveland
-				a.add-to-calendar(href='/') Add to Calendar
-				p This page is under construction. Cleveland event description will go here. This page is under construction. Cleveland event description will go here.
-			.event
-				h3 Ceremony in Chicago
-				a.add-to-calendar(href='/') Add to Calendar
-				p This page is under construction. Chicago event description will go here. This page is under construction. Chicago event description will go here.
-
-		script.
-			$(document).ready(function(){
-				var animSpeed = 200;
-				$('.right-arrow').on("click", function() {
-					if(parseInt($(".event-container").css("marginLeft")) == -200){ return;}
-					$('.event-container').animate({marginLeft : "-=500"}, animSpeed);     
-				});
-				$('.left-arrow').on("click", function() {
-					if(parseInt($(".event-container").css("marginLeft")) == 0){ return;}
-					$('.event-container').animate({marginLeft : "+=500"}, animSpeed);
-				});
-			});
+	h1 Details about the big&nbsp;day(s).
+	p We can’t wait for you to join us! Below is all the information you should need. We’ll add links to the hotel room block when they’re available, so check back soon!
+	
+	table(style='width: 100%; margin-bottom: 2em; margin-left: 0')
+		tr(style='width: 50%')
+			td(style='width: 50%')
+				a(href='https://apple.co/2XuUCrp', target='_blank') stay &rsaquo;
+			td(style='width: 50%') 
+				a(href='https://apple.co/2XuUCrp', target='_blank') <span style="font-weight: 700; color: black">The Ace Hotel</span> &nearr;
+		tr(style='width: 50%')
+			td(style='width: 50%') Friday & Saturday
+			td(style='width: 50%') 311 N Morgan St
+	
+	table(style='width: 100%; margin-bottom: 2em; margin-left: 0')
+		tr(style='width: 50%')
+			td(style='width: 50%') 
+				a(href='https://apple.co/2QY7XWI', target='_blank') welcome reception &rsaquo;
+			td(style='width: 50%')
+				a(href='https://apple.co/2QY7XWI', target='_blank') <span style="font-weight: 700; color: black">Kaiser Tiger</span> &nearr;
+		tr(style='width: 50%')
+			td(style='width: 50%') September 13 @ 7pm
+			td(style='width: 50%') 1415 W Randolph St	
+	
+	table(style='width: 100%; margin-left: 0')
+		tr(style='width: 50%')
+			td(style='width: 50%')
+				a(href='https://apple.co/2wI1rKi', target='_blank') celebrate &rsaquo;
+			td(style='width: 50%') 
+				a(href='https://apple.co/2wI1rKi', target='_blank') <span style="font-weight: 700; color: black">Little Goat Kitchen</span> &nearr;
+		tr(style='width: 50%')
+			td(style='width: 50%') September 14 @ 7pm
+			td(style='width: 50%') 820 W Randolph St
