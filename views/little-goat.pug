@@ -1,0 +1,35 @@
+extends layout
+
+block left
+	+photostatic('background-image:url(../images/little-goat.jpeg)','Little Goat Kitchen')
+
+block right
+	+breadcrumbs('/details','Details')
+	h1 Little Goat Kitchen
+	h2 820 W Randolph St
+
+	p Little Goat's private event space is called Little Goat Kitchen, and features an open kitchen where we can see our meal being prepared, a full bar, and an outdoor rooftop space (pictured) where we'll be having our ceremony.
+
+	h2 Schedule of events
+	table
+		tr
+			td.time 6pm &rsaquo;
+			td Guests arrive.
+		+tablespacer
+		tr
+			td.time 6:15 &rsaquo;
+			td A brief ceremony on the rooftop.
+		+tablespacer
+		tr
+			td.time 6:35 &rsaquo;
+			td Cocktail hour.
+		+tablespacer
+		tr
+			td.time 7:30 &rsaquo;
+			td Family-style dinner.
+		+tablespacer
+		tr
+			td.time 8:30–11 &rsaquo;
+			td Cake, dancing, and other nonsense.
+
+	p Please arrive by 6pm. The ceremony will start at 6:15, followed by a cocktail hour, a family-style dinner, and then fun and dancing to wrap up the night. We have to shut down Little Goat by 11pm, but we plan to keep the party going back at the rooftop bar at the Ace Hotel.

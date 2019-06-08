@@ -10,7 +10,7 @@ body
 	height: 100%
 	background: $backgroundcolor
 
-.left-half
+.left
 	position: absolute
 	width: 50%
 	height: 100%
@@ -21,7 +21,7 @@ body
 		width: 100%
 		height: 50%
 
-.photo
+.photo, .photostatic
 	height: 100%
 	background-position: center center
 	background-repeat: no-repeat
@@ -47,10 +47,6 @@ body
 		+breakpoint(ipad)
 			padding-left: 1.5em
 			font-size: 1em
-	
-.map
-	height: 100%
-	width: 100%
 
 .temp
 	width:100px 
@@ -63,7 +59,7 @@ body
 	height: 100%
 	width: 100%
 
-.right-half
+.right
 	position: absolute
 	width: 50%
 	height: 100%
@@ -88,8 +84,6 @@ body
 			padding: 2em
 		+breakpoint(ipad)
 			padding: 1.5em
-		+breakpoint(iphone)
-			padding: 0em 1.5em 1.5em 1.5em
 
 h1
 	font-weight: 700
@@ -110,14 +104,20 @@ h2
 	+breakpoint(ipad)
 		font-size: 1.25em
 
-h3
-	color: $lightgray
-	font-weight: 300
-	font-size: 1.75em
-	+breakpoint(ipadpro)
-		font-size: 1.5em
-	+breakpoint(ipad)
-		font-size: 1em
+h3, p, li
+	font-weight: 400
+	font-size: 1.25em
+	line-height: 1.5em
+	max-width: 750px
+	padding-bottom: 0.5em
+
+li.first
+	@extend p
+	padding-bottom: 1em
+		
+ul
+	list-style: none
+	padding-left: 0
 
 a
 	text-decoration: none
@@ -132,8 +132,6 @@ a
 		font-weight: 500
 		text-decoration: none
 		color: $accentcolor
-		+breakpoint(iphone)
-			padding-top: 30em
 	span.venue
 		font-weight: 700
 		color: black
@@ -145,33 +143,14 @@ table
 	td, tr
 		width: 50%
 
-p, li
-	font-weight: 400
-	font-size: 1.25em
-	line-height: 1.5em
-	max-width: 750px
-	padding-bottom: 1em
-		
-ul
-	list-style: none
-	padding-left: 0
-		
-.button-area
-	display: flex
-	width: 100%
-	justify-content: center
-	align-items: stretch
-	align-content: center
-	padding: 1em 0em 5em 0em
-	+breakpoint(imac)
-		flex-direction: row wrap
-	+breakpoint(macbook)
-		flex-direction: column
+td.time
+	@extend a
+	width: 10%
 		
 button, .submit
 	font-size: 1em
 	height: 50px
-	width: 150px
+	width: 300px
 	color: black
 	background-color: $accentcolor
 	border: none
@@ -190,6 +169,8 @@ button, .submit
 	&:active
 		background-color: darken($accentcolor, 30%)
 		color: white
+	label
+		cursor: pointer
 
 .footer
 	font-size: 0.5em

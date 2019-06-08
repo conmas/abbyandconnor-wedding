@@ -1,31 +1,38 @@
-mixin breadcrumbs
-	a.breadcrumbs(href='/') &lsaquo; Back
+mixin breadcrumbs(url='/',label='Back')
+	a.breadcrumbs(href=url) &lsaquo; 
+		span= label
 
 mixin footer
 	p.footer
 	| © 2019 Taxi Buddies. 
 	a(href='README.md') About &rsaquo;
 
-mixin venue(name, label, url, time, address)
+mixin tablespacer
+	tr
+		td.time &#8203;
+		td &#8203;
+
+mixin venue(name,label,url,map,time,address)
 	tr
 		td
-			a(href=url, target='_blank') 
+			a(href=url) 
 				span=label 
 				span &#8203; &rsaquo;
 		td 
-			a(href=url, target='_blank')
+			a(href=map, target='_blank')
 				span.venue=name 
 				span &#8203; &nearr;
 	tr
 		td=time
 		td=address
-	tr
-		td &#8203;
-		td &#8203;
-	tr
-		td &#8203;
-		td &#8203;
 
-mixin photo(href, name)
+	+tablespacer
+	+tablespacer
+
+mixin photostatic(href,name)
+	.photostatic(style=href, alt=name)
+
+mixin photo(href,name)
 	.photo(style=href, alt=name)
 		span= name
+

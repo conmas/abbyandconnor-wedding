@@ -1,0 +1,26 @@
+extends layout
+
+block left
+	+photostatic('background-image:url(../images/ace-hotel.jpeg)','Ace Hotel, Chicago')
+
+block right
+	+breadcrumbs('/details','Details')
+	h1 The Ace Hotel, Chicago
+	h2 311 N Morgan St
+	h3 The Ace Hotel will be our home base for the weekend, and it's centrally located within walking distance of (or very short Uber ride from) all the other wedding activities. 
+
+	p It's also right near tons of Chicago's best bars and restaurants in the West Loop and Fulton Market neighborhoods, which you can check out during any downtime over the weekend. The hotel itself also has two bars, a restaurant, and a coffeeshop, so you won't need to go far to grab a drink or a cold brew.
+
+	p We have a room block reserved with preferred rates for our guests, and you can either email, call, or use the hotel's website below to reserve your room from our room block. The link below automatically applies our room block discount, and you'll need to book your room before August 21.
+
+	a(href='https://www.acehotel.com/chicago/reservations/availability/2019-09-13/2019-09-15/group-code/190913ABBY/', target='_blank')
+		button
+			label Book your room &rsaquo;
+
+	p Alternatively, you can call or email, but just make sure to reference our names to get the discounted rates.
+
+	ul
+		li.first
+			a(href='mailto:reservations.chi@acehotel.com') Reserve via email &rsaquo;
+		li
+			a(href='tel:3125481177') Reserve over the phone &rsaquo;

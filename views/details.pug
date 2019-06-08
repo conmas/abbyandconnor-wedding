@@ -8,9 +8,32 @@ block left
 block right
 	+breadcrumbs
 	h1 Details about the big&nbsp;day(s).
-	p We can’t wait for you to join us! Below is all the information you should need. We’ll add links to the hotel room block when they’re available, so check back soon!
+	h3 We can’t wait for you to join us! Below is all the information you should need. We’ll add links to the hotel room block when they’re available, so check back soon!
 	
 	table
-		+venue('The Ace Hotel','stay','https://apple.co/2XuUCrp','Friday & Saturday','311 N Morgan St')
-		+venue('Kaiser Tiger','welcome reception','https://apple.co/2QY7XWI','September 13 @ 7pm','1415 W Randolph St')
-		+venue('Little Goat Kitchen','celebrate','https://apple.co/2wI1rKi','September 14 @ 6pm','820 W Randolph St')
+		+venue(
+			'The Ace Hotel',
+			'stay',
+			'/details/ace-hotel',
+			'https://apple.co/2XuUCrp',
+			'Friday & Saturday',
+			'311 N Morgan St'
+			)
+		+venue(
+			'Kaiser Tiger',
+			'welcome reception',
+			'/details/kaiser-tiger',
+			'https://apple.co/2QY7XWI',
+			'September 13 @ 7pm',
+			'1415 W Randolph St'
+			)
+		+venue(
+			'Little Goat Kitchen',
+			'celebrate',
+			'/details/little-goat',
+			'https://apple.co/2wI1rKi',
+			'September 14 @ 6pm',
+			'820 W Randolph St'
+			)
+
+		// Route these links to the /venues/* pages to provide more details and show room links, a map, and so on.

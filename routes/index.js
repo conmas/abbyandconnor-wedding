@@ -29,6 +29,18 @@ router.get('/rsvp', function(req, res, next) {
     res.render('rsvp', { title: 'RSVP' });
 });
 
+/* GET venues pages. */
+router.get('/details/ace-hotel', function(req, res, next) {
+    res.render('ace-hotel', { title: 'Ace Hotel' });
+});
+router.get('/details/kaiser-tiger', function(req, res, next) {
+    res.render('kaiser-tiger', { title: 'Kaiser Tiger' });
+});
+router.get('/details/little-goat', function(req, res, next) {
+    res.render('little-goat', { title: 'Little Goat' });
+});
+
+
 router.post('/', [
 	check('name', 'Please enter your name.').isLength({min:1}).trim(),
 	check('message', 'Please enter a message.').isLength({min:1}).trim()
