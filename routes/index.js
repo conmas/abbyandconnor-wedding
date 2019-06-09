@@ -41,7 +41,7 @@ router.get('/details/little-goat', function(req, res, next) {
 });
 
 
-router.post('/', [
+router.post('/rsvp-submit', [
 	check('name', 'Please enter your name.').isLength({min:1}).trim(),
 	check('message', 'Please enter a message.').isLength({min:1}).trim()
 	], function(req, res, next) {
@@ -64,7 +64,7 @@ router.post('/', [
 		mailgun.messages().send(data, (error, body) => {
 			if(error) {
 				console.log(error);
-				res.redirect('/');
+				res.redirect('/rsvp');
 			} else {
 				console.log('An email from ' + req.body.email + ' was sent to ' + process.env.MAILGUN_TO_ADDRESS);
 				res.redirect('/thanks');
