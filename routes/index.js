@@ -9,27 +9,18 @@ const mailgun = require('mailgun-js')({apiKey: API_KEY, domain: DOMAIN});
 
 const nodemailer = require('nodemailer');
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Abby and Connor are getting married.' });
 });
-
-/* GET details page. */
 router.get('/details', function(req, res, next) {
     res.render('details', { title: 'Details' });
 });
-
-/* GET registry page. */
 router.get('/registry', function(req, res, next) {
     res.render('registry', { title: 'Registry' });
 });
-
-/* GET RSVP page. */
 router.get('/rsvp', function(req, res, next) {
     res.render('rsvp', { title: 'RSVP' });
 });
-
-/* GET venues pages. */
 router.get('/details/ace-hotel', function(req, res, next) {
     res.render('ace-hotel', { title: 'Ace Hotel' });
 });
@@ -40,10 +31,8 @@ router.get('/details/little-goat', function(req, res, next) {
     res.render('little-goat', { title: 'Little Goat' });
 });
 
-
 router.post('/rsvp-submit', [
-	check('name', 'Please enter your name.').isLength({min:1}).trim(),
-	check('message', 'Please enter a message.').isLength({min:1}).trim()
+	check('name', 'Please enter your name.').isLength({min:1}).trim()
 	], function(req, res, next) {
 
 		// deal with errors from the form validation
@@ -54,27 +43,27 @@ router.post('/rsvp-submit', [
 
   		// if no validation errors, then create the email
 		let data = {
-			from: req.body.name,
+			from: 'rsvp@abbyandconnor.wedding',
 			to: process.env.MAILGUN_TO_ADDRESS,
 			subject: 'New RSVP from ' + req.body.name,
-			text: req.body.message
+			text: 'Attending wedding?' + req.body.wedding + 'Attending Kaiser?' + req.body.kaiser + req.body.message
 		};
 
 		//send the email
 		mailgun.messages().send(data, (error, body) => {
 			if(error) {
 				console.log(error);
-				res.redirect('/rsvp');
+				res.redirect('/error');
 			} else {
-				console.log('An email from ' + req.body.email + ' was sent to ' + process.env.MAILGUN_TO_ADDRESS);
-				res.redirect('/thanks');
+				console.log('An email from ' + req.body.name + ' was sent to ' + process.env.MAILGUN_TO_ADDRESS);
+				res.redirect('/includes/thanks');
 			}
 		});
 
 });
 
-router.get('includes/thanks', function(req, res, next) {
-	res.render('includes/thanks');
+router.get('/includes/thanks', function(req, res, next) {
+	res.render('/includes/thanks');
 })
 
 
