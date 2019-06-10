@@ -1,11 +1,12 @@
 extends layout
 
 block left
-	+photostatic('background-image:url(images/bucktown.jpeg)','Chicago, the night we got engaged')
+	+photostatic('background-image:url(images/corn.jpeg)','Connor loved the hot corn soup from vending machines in Japan.')
 
 block right
 	+breadcrumbs('/','Return home')
 	h1=error.status
 	h2=message
-	h3 Hmm, something went wrong. You should probably just <a href="/">return home</a>.
-	p(style='font-size: 0.5em') #{error.stack}
+	p Hmm, something went wrong. Here&#8217;s a picture of Connor enjoying a corn-flavored drink in Tokyo.
+	p You should probably just <a href="/">return home</a>.
+	p(style='font-size: 0.5em; width: 80%') #{error.stack}

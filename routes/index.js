@@ -46,7 +46,7 @@ router.post('/rsvp-submit', [
 			from: 'rsvp@abbyandconnor.wedding',
 			to: process.env.MAILGUN_TO_ADDRESS,
 			subject: 'New RSVP from ' + req.body.name,
-			text: 'Attending wedding?' + req.body.wedding + 'Attending Kaiser?' + req.body.kaiser + req.body.message
+			text: req.body.name + ' has RSVPed to your wedding! \n\n' + 'Attending wedding at Little Goat? ' + req.body.wedding + '\n Attending welcome reception at Kaiser Tiger? ' + req.body.kaiser + '\n Notes: ' + req.body.message
 		};
 
 		//send the email
@@ -56,14 +56,14 @@ router.post('/rsvp-submit', [
 				res.redirect('/error');
 			} else {
 				console.log('An email from ' + req.body.name + ' was sent to ' + process.env.MAILGUN_TO_ADDRESS);
-				res.redirect('/includes/thanks');
+				res.redirect('/thanks');
 			}
 		});
 
 });
 
-router.get('/includes/thanks', function(req, res, next) {
-	res.render('/includes/thanks');
+router.get('/thanks', function(req, res, next) {
+	res.render('thanks');
 })
 
 

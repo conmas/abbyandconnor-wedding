@@ -1,0 +1,15 @@
+extends layout
+
+block left
+	+photostatic('background-image:url(../images/lincoln-park.jpeg)','Lincoln Park, Chicago')
+
+block right
+	+breadcrumbs('/', 'Return home')
+	h1 Thanks! We can&#8217;t wait to see you.
+	p If you have any questions or other notes that you&#8217;d like to share with us before the day, please don&#8217;t hesitate to shoot us an email.
+	
+	ul
+		li
+			a(href='mailto:taxibuddies@gmail.com', target='_blank') Email Abby and Connor &rsaquo;
+		li
+			a(href='/registry') Check out our wedding registry &rsaquo;

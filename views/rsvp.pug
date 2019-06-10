@@ -7,27 +7,27 @@ block right
 	+breadcrumbs
 	
 	h1 RSVP to the event.
-	p We hope everyone is able to join us! Please complete the form below to let us know if you're coming. Include any dietary restrictions or other preferences in the message field. We'll be sure to reach out if we have any questions!
+	p We hope everyone is able to join us! Please complete the form below to let us know if you&#8217;re coming. Include any dietary restrictions or other preferences in the message field. We&#8217;ll be sure to reach out if we have any questions!
 
 	form(action='/rsvp-submit', method='POST', autocomplete='off')
 		fieldset
-			input.text(type='text', name='name', placeholder='Name', required)
+			input.text(type='text' name='name' placeholder='Name' required)
 			.underline
 		
 		fieldset.switch
 			label.switch
-				input.switch(type='checkbox', name="wedding", checked)
+				input.switch(type='checkbox' name="wedding" value="yes" checked)
 				span.slider
-			p.switchLabel I'll be at the ceremony at<br>Little Goat on September 14!
+			p.switchLabel I&#8217;ll be at the ceremony at<br>Little Goat on September 14!
 
 		fieldset.switch
 			label.switch
-				input.switch(type='checkbox', name="kaiser" checked)
+				input.switch(type='checkbox' name="kaiser" value="yes" checked)
 				span.slider
-			p.switchLabel I'll be at the welcome reception<br>at Kaiser Tiger on September 13!
+			p.switchLabel I&#8217;ll be at the welcome reception<br>at Kaiser Tiger on September 13!
 
 		fieldset
-			input.text(type='text', name='message', placeholder='Anything we should note? Dietary restrictions?')
+			input.text(type='text' name='message' placeholder='Anything we should note? Dietary restrictions?')
 			.underline
 
 		fieldset
