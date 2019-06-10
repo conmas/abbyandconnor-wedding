@@ -30,6 +30,9 @@ router.get('/details/kaiser-tiger', function(req, res, next) {
 router.get('/details/little-goat', function(req, res, next) {
     res.render('little-goat', { title: 'Little Goat' });
 });
+router.get('/about', function(req, res, next) {
+    res.render('about', { title: 'About' });
+});
 
 router.post('/rsvp-submit', [
 	check('name', 'Please enter your name.').isLength({min:1}).trim()

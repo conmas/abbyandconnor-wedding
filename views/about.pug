@@ -1,0 +1,25 @@
+extends layout
+
+block left
+	+photostatic('background-image:url(images/takeshita.jpeg)','Takeshita Street, Tokyo')
+	
+block right
+	+breadcrumbs
+	h1 About this site.
+	p Rather than basing our wedding website on a prebuilt Squarespace theme or some template from the Knot, Abby and Connor designed and developed this website by hand using Connor&#8217;s newfangled front-end web development skills.
+	p Connor&#8217;s still very new to web development, so if anything doesn&#8217;t work correctly or seems broken, feel free to
+		a(href='mailto:cnnr@icloud.com?subject=Something seems broken on your wedding website&body=Describe what&#8217;s happening here. Please make sure to include the browser and device you&#8217;re using. Thanks for the help!', target='_blank') let him know!
+	p
+	| Built with 
+	a(href='https://nodejs.org/en/', target='_blank') Node.js 
+	| ,
+	a(href='https://expressjs.com/', target='_blank') Express
+	| , and 
+	a(href='https://pugjs.org/api/getting-started.html', target='_blank') Pug
+	| . Written in 
+	a(href='https://www.panic.com/coda/', target='_blank') Coda for macOS and iOS
+	| . Hosted on 
+	a(href='https://www.linode.com/', target='_blank') Linode
+	| . Source code available on 
+	a(href='https://github.com/conmas/abbyandconnor-wedding/', target='_blank') GitHub
+	| . Feel free to contribute!
