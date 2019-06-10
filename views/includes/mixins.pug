@@ -25,7 +25,12 @@ mixin venue(name,label,url,map,time,address)
 	tr
 		td=time
 		td=address
-
+	+tablespacer
+	tr
+		td
+		td
+			a(href=url)
+				span #[strong Full details &rsaquo;]
 	+tablespacer
 	+tablespacer
 
