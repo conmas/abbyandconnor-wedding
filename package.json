@@ -1,12 +1,12 @@
 {
   "name": "abbyandconnor-wedding",
-  "version": "2019.6.8",
+  "version": "2019.8.9",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "acorn-globals": "^4.3.2",
+    "acorn-globals": "^4.3.3",
     "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~4.1.1",
@@ -14,14 +14,14 @@
     "dotenv": "^8.0.0",
     "express": "~4.17.1",
     "express-messages": "^1.0.1",
-    "express-validator": "^5.3.1",
-    "http-errors": "~1.7.2",
+    "express-validator": "^6.1.1",
+    "http-errors": "~1.7.3",
     "mailgun-js": "^0.22.0",
     "morgan": "~1.9.1",
-    "nodemailer": "^6.2.1",
-    "pug": "^2.0.3",
-    "pug-code-gen": "^2.0.1",
-    "sass": "^1.21.0",
+    "nodemailer": "^6.3.0",
+    "pug": "^2.0.4",
+    "pug-code-gen": "^2.0.2",
+    "sass": "^1.22.9",
     "smtp-server": "^3.5.0",
     "with": "^6.0.0"
   }
