@@ -20,7 +20,7 @@
     "morgan": "~1.9.1",
     "nodemailer": "^6.3.0",
     "pug": "^3.0.1",
-    "pug-code-gen": "^2.0.2",
+    "pug-code-gen": "^2.0.3",
     "sass": "^1.22.9",
     "smtp-server": "^3.5.0",
     "with": "^6.0.0"
