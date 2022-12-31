@@ -12,7 +12,7 @@
     "debug": "~4.1.1",
     "dependencies": "0.0.1",
     "dotenv": "^8.0.0",
-    "express": "~4.17.1",
+    "express": "~4.17.3",
     "express-messages": "^1.0.1",
     "express-validator": "^6.1.1",
     "http-errors": "~1.7.3",
